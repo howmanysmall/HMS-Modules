@@ -29,7 +29,7 @@ end
 
 function GeneralMath.Factors(Number)
 	local Factors = { }
-	for Index = 1, 0.5 * Number do
+	for Index = 1, Number / 2 do
 		if Number % Index == 0 then
 			Factors[#Factors + 1] = Index
 		end
@@ -45,17 +45,17 @@ end
 function GeneralMath.Mid2D(VectorOne, VectorTwo)
 	Debug.Assert(typeof(VectorOne) == "Vector2", "\"VectorOne\" is not a \"Vector2\"; instead got a: %s", typeof(VectorOne))
 	Debug.Assert(typeof(VectorTwo) == "Vector2", "\"VectorTwo\" is not a \"Vector2\"; instead got a: %s", typeof(VectorTwo))
-	local MidX = 0.5 * (VectorOne.X + VectorTwo.X)
-	local MidY = 0.5 * (VectorOne.Y + VectorTwo.Y)
+	local MidX = (VectorOne.X + VectorTwo.X) / 2
+	local MidY = (VectorOne.Y + VectorTwo.Y) / 2
 	return Vector2.new(MidX, MidY)
 end
 
 function GeneralMath.Mid3D(VectorOne, VectorTwo)
 	Debug.Assert(typeof(VectorOne) == "Vector3", "\"VectorOne\" is not a \"Vector3\"; instead got a: %s", typeof(VectorOne))
 	Debug.Assert(typeof(VectorTwo) == "Vector3", "\"VectorTwo\" is not a \"Vector3\"; instead got a: %s", typeof(VectorTwo))
-	local MidX = 0.5 * (VectorOne.X + VectorTwo.X)
-	local MidY = 0.5 * (VectorOne.Y + VectorTwo.Y)
-	local MidZ = 0.5 * (VectorOne.Z + VectorTwo.Z)
+	local MidX = (VectorOne.X + VectorTwo.X) / 2
+	local MidY = (VectorOne.Y + VectorTwo.Y) / 2
+	local MidZ = (VectorOne.Z + VectorTwo.Z) / 2
 	return Vector3.new(MidX, MidY, MidZ)
 end
 
